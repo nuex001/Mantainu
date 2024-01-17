@@ -9,9 +9,11 @@
 :root {
     --text: #fff;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -179,13 +181,13 @@ html{
 
 .container .token.active .cover {
     opacity: 1;
-    transition: transform 20s ease-in-out;
+    transition: transform 10s ease-in-out;
     transform: translate3d(150%, 0px, 0);
     /* border: 2px solid var(--text); */
 }
 
 .container .token.active img {
-    animation: bounce 20s ease-in-out 1;
+    animation: bounce 10s ease-in-out 1;
     transform: translate3d(50px, -70px, 0);
 }
 
@@ -250,142 +252,130 @@ html{
 /****************mobile*********************/
 
 @media (max-width:768px) {
+    .container {
+        padding: 0em 1em;
+    }
 
-.container nav {
-    padding: 1em 1em;
-}
+    .container nav {
+        padding: 1em 1em;
+    }
 
-.container nav .logo img {
-    object-fit: contain;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 9;
-}
+    .container nav .logo img {
+        object-fit: contain;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 9;
+    }
 
-.container nav ul {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100vh;
-    z-index: 6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8em 0em;
-    background: linear-gradient(to bottom, #004C99, #0099FF);
-    transition:transform 500ms ease-in-out;
-    transform: translate3d(-100%, 0, 0);
-}
+    .container nav ul {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+        z-index: 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8em 0em;
+        background: linear-gradient(to bottom, #004C99, #0099FF);
+        transition: transform 500ms ease-in-out;
+        transform: translate3d(-100%, 0, 0);
+    }
 
-.container nav ul.active{
-    transform: translate3d(0%, 0, 0);
-}
+    .container nav ul.active {
+        transform: translate3d(0%, 0, 0);
+    }
 
-.container nav ul li a {
-    font-size: 4em;
-}
+    .container nav ul li a {
+        font-size: 4em;
+    }
 
-.container nav #menuBtn {
-    display: block;
-    position: relative;
-    z-index: 9;
-    font-size: 4em;
-    cursor: pointer;
-}
-
-
-/* HEADER */
-.container header {
-    /* border: 2px solid var(--text); */
-    padding: 1em 1em;
-    flex-direction: column;
-}
-
-.container header .text {
-    width: 100%;
-}
-
-.container header .text h1 {
-    font-size: 6em;
-}
-.container header img {
-    width: 100%;
-    margin-top: 2em;
-}
+    .container nav #menuBtn {
+        display: block;
+        position: relative;
+        z-index: 9;
+        font-size: 4em;
+        cursor: pointer;
+    }
 
 
+    /* HEADER */
+    .container header {
+        /* border: 2px solid var(--text); */
+        padding: 1em 1em;
+        flex-direction: column;
+    }
 
+    .container header .text {
+        width: 100%;
+    }
 
-/* TOKEN */
-.container .token {
-    padding: 1em 1em;
-    margin-top: 4em;
-}
+    .container header .text h1 {
+        font-size: 6em;
+    }
 
-.container .token h1 {
-    font-size: 6em;
-    color: var(--text);
-    text-align: center;
-}
-
-.container .token .cont {
-    /* border: 2px solid var(--text); */
-    flex-direction: column;
-}
-
-.container .token .cover {
-    bottom: 0%;
-    left: 0%;
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-}
-.container .token .cover img{
-object-fit: cover;
-width: 70%;
-}
-.container .token.active .cover {
-    opacity: 1;
-    transition: transform 20s ease-in-out;
-    transform: translate3d(0%, -100%, 0);
-    /* border: 2px solid var(--text); */
-}
-
-.container .token img {
-    animation: bounce 20s ease-in-out 1;
-    transform: translate3d(50px, -70px, 0);
-}
-
-
-.container .token .box {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    padding: 2em 2em;
-    background: #004C99;
-    position: relative;
-    z-index: 4;
-}
-
-.container .token .box p {
-    font-size: 2.4em;
-    margin: 0.5em 0em;
-    text-align: center;
-    color: var(--text);
-
-    /* font-family: monospace; */
-}
-
-.container .token .box a {
-    color: #0099FF;
-}
+    .container header img {
+        width: 100%;
+        margin-top: 2em;
+    }
 
 
 
+
+    /* TOKEN */
+    .container .token {
+        padding: 1em 1em;
+        margin-top: 4em;
+    }
+
+    .container .token h1 {
+        font-size: 6em;
+        color: var(--text);
+        text-align: center;
+    }
+
+    .container .token .cont {
+        /* border: 2px solid var(--text); */
+        flex-direction: column;
+    }
+
+    .container .token .cover {
+        bottom: 0%;
+        left: 0%;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .container .token .cover img {
+        object-fit: cover;
+        width: 95%;
+    }
+
+    .container .token.active .cover {
+        opacity: 1;
+        transition: transform 15s ease-in-out;
+        transform: translate3d(0%, -70%, 0);
+        /* border: 2px solid var(--text); */
+    }
+
+    .container .token.active img {
+        animation: bounce 15s ease-in-out 1;
+        transform: translate3d(10px, -70px, 0);
+    }
+
+    .container .token .box {
+        width: 100%;
+        margin-top: 100%;
+    }
+
+    .container .token .box p {
+        font-size: 2em;
+    }
 
 
 }
