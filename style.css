@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0%;
@@ -264,6 +265,7 @@ html {
         transform: translateX(100%);
     }
 }
+
 /* 2 */
 .container .token .row .box .efx:nth-child(2) {
     position: absolute;
@@ -336,7 +338,8 @@ html {
     border-radius: 50%;
 }
 
-.container .token .row .box h2 , .container .token .row .box a{
+.container .token .row .box h2,
+.container .token .row .box a {
     color: var(--text);
     font-size: 3em;
 }
@@ -348,6 +351,41 @@ html {
     text-align: center;
 }
 
+
+/* MANTA */
+.container .manta {
+    padding: 4em 5em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20em;
+    padding-top: 10em;
+}
+
+.container .manta a{
+    font-size: 4em;
+    color: var(--text);
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-family: "Bebas Neue", sans-serif;
+    transition: 500ms ease-in-out;
+}
+.container .manta a img{
+    object-fit: cover;
+    width: 100px;
+}
+.container .manta a i{
+    font-size: 100px;
+}
+.container .manta a:hover{
+    color: #004C99;
+}
 
 /* FOOTER */
 .container footer {
@@ -505,17 +543,15 @@ html {
         height: 50%;
     }
 
-
-    .container .token .box {
-        /* background: rgba(0, 0, 0, 0.5); */
+    .container .manta{
+        flex-direction: column;
+        gap:7em;
     }
 
 
     /* FOOTER */
     .container footer {
         padding: 1em 1em;
-        /* flex-direction: column; */
-        /* gap: 4em 0em; */
     }
 
     .container footer .logo img {
