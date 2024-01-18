@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500;1,9..40,700;1,9..40,800&family=Moirai+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0%;
@@ -211,79 +213,140 @@ html {
     text-align: center;
 }
 
-.container .token .cont {
-    display: flex;
-    width: 100%;
-    min-height: calc(70vh - 1vh);
-    align-items: center;
-    justify-content: space-between;
-    /* border: 2px solid var(--text); */
-    position: relative;
+.container .token p {
+    font-size: 2em;
+    color: var(--text);
+    text-align: center;
+    padding: 0em 10em;
+    margin: 1em 0em
 }
 
-.container .token .images {
+.container .token .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+    margin-top: 4em;
+}
+
+.container .token .row .box {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 2em;
+    font-family: "Moirai One", system-ui;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .token .row .box .efx:nth-child(1) {
     position: absolute;
     top: 0%;
     left: 0%;
     width: 100%;
-    height: 75vh;
-    border-radius: 10px;
-    z-index: 2;
-    display: flex;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 2px solid #fff; */
-    margin-top: 4em;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #0099FF);
+    animation: animate_one 2s linear infinite;
 }
 
-.container .token img {
+@keyframes animate_one {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+/* 2 */
+.container .token .row .box .efx:nth-child(2) {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #0099FF);
+    animation: animate_two 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_two {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* 3 */
+.container .token .row .box .efx:nth-child(3) {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #0099FF);
+    animation: animate_three 2s linear infinite;
+}
+
+@keyframes animate_three {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 4 */
+.container .token .row .box .efx:nth-child(4) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #0099FF);
+    animation: animate_four 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_four {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.container .token .row .box img {
     object-fit: cover;
-    width: 30%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-
-.container .token .box {
-    width: 100%;
-    height: 75vh;
-    border-radius: 10px;
-    padding: 2em 2em;
-    background: rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 4;
-    display: flex;
-    gap: 10em;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    text-align: center;
-    justify-content: center;
-    margin-top: 4em;
-}
-
-.container .token .box li {
-    font-size: 3em;
-    margin: 0.5em 0em;
-    text-align: center;
+.container .token .row .box h2 {
     color: var(--text);
-    align-self: start;
-    font-weight: bold;
-    /* border: 2px solid #fff; */
+    font-size: 3em;
 }
 
-.container .token .box li:first-child {
-    display: block;
-    width: 100%;
-}
-
-.container .token .box li span {
-    display: block;
-    color: #0099FF;
-    font-size: 1.4em;
-    margin-bottom: 0.2em;
-}
-
-.container .token .box a {
-    color: #fff;
+.container .token .row .box h3 {
+    color: var(--text);
+    font-size: 4em;
+    word-break: break-all;
+    text-align: center;
 }
 
 
@@ -336,7 +399,7 @@ html {
 
 /****************mobile*********************/
 
-@media (max-width:1024px) {
+@media (max-width:768px) {
     .container {
         padding: 0em 2em;
     }
@@ -432,8 +495,7 @@ html {
     }
 
     .container .token .images {
-        min-height: 75hv;
-        height: auto;
+        /* height: auto; */
         flex-direction: column;
         overflow: hidden;
     }
@@ -446,57 +508,8 @@ html {
 
 
     .container .token .box {
-        width: 100%;
-        min-height: 75hv;
-        height: auto;
-        border-radius: 10px;
-        padding: 2em 2em;
-        background: rgba(0, 0, 0, 0.5);
-        position: relative;
-        z-index: 4;
-        display: flex;
-        gap: 2em 8em;
-        flex-wrap: wrap;
-        align-self: flex-start;
-        text-align: center;
-        justify-content: center;
-        margin-top: 4em;
+        /* background: rgba(0, 0, 0, 0.5); */
     }
-
-    .container .token .box li {
-        font-size: 2em;
-        margin: 0.5em 0em;
-        text-align: center;
-        color: var(--text);
-        align-self: start;
-        font-weight: bold;
-        /* border: 2px solid #fff; */
-    }
-
-    .container .token .box li:first-child {
-        display: block;
-        width: 100%;
-    }
-
-    .container .token .box li:first-child {
-        font-size: 1.2em;
-    }
-
-    .container .token .box li:first-child span {
-        font-size: 2.8em;
-    }
-
-    .container .token .box li span {
-        display: block;
-        color: #0099FF;
-        font-size: 1.4em;
-        margin-bottom: 0.2em;
-    }
-
-    .container .token .box a {
-        color: #fff;
-    }
-
 
 
     /* FOOTER */
@@ -509,6 +522,7 @@ html {
     .container footer .logo img {
         width: 50px;
     }
+
     .container footer ul li img {
         height: 30px;
     }
