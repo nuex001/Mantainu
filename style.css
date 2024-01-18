@@ -343,12 +343,19 @@ html {
     color: var(--text);
     font-size: 3em;
 }
-
 .container .token .row .box h3 {
     color: var(--text);
     font-size: 4em;
     word-break: break-all;
     text-align: center;
+}
+.container .token .row .subheader {
+    color:#004C99;
+    font-size: 4em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
