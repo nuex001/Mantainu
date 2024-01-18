@@ -337,7 +337,7 @@ html {
     border-radius: 50%;
 }
 
-.container .token .row .box h2 {
+.container .token .row .box h2 , .container .token .row .box a{
     color: var(--text);
     font-size: 3em;
 }
