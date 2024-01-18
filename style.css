@@ -432,9 +432,10 @@ html {
     }
 
     .container .token .images {
-        min-height: 75;
+        min-height: 75hv;
         height: auto;
         flex-direction: column;
+        overflow: hidden;
     }
 
     .container .token img {
@@ -446,7 +447,7 @@ html {
 
     .container .token .box {
         width: 100%;
-        min-height: 75;
+        min-height: 75hv;
         height: auto;
         border-radius: 10px;
         padding: 2em 2em;
