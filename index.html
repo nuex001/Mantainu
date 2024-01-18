@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <nav>
-            <a href="/" class="logo"><img src="./assets/logo.png" alt=""></a>
+            <a href="/" class="logo"><img src="./assets/logo1.png" alt=""></a>
             <ul id="menu">
                 <li onclick="closeMenu()"><a href="#home">Home</a></li>
                 <li onclick="closeMenu()"><a href="#token">Token</a></li>
@@ -36,33 +36,60 @@
                     </a>
                     <a href="https://dexscreener.com/manta/0xdca31e20e5584dbcb8ff03debb6cbe8f353acb0d"
                         target="_blank"><i class="fa-solid fa-chart-line"></i></a>
-                    <a href="https://pacific-explorer.manta.network/"
-                        target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://pacific-explorer.manta.network/" target="_blank"><i
+                            class="fa-solid fa-globe"></i></a>
                 </div>
+                <a href="https://pacificswap.xyz/" class="buyBtn">
+                    <img src="./assets/buy.svg" alt="">
+                    <span> Buy on pacificswap</span>
+                </a>
             </div>
-            <img src="/assets/img2.jpg" alt="">
+            <img src="/assets/img2.jpg" alt="" class="cover">
         </header>
-        <div class="token" id="token">
+        <section class="token" id="token">
             <h1>Tokenomics</h1>
             <div class="cont">
-                <div class="cover">
-                    <img src="/assets/cover.png" alt="">
+                <div class="images">
+                    <img src="/assets/bg1.png" alt="">
+                    <img src="/assets/bg.png" alt="">
+                    <img src="/assets/bg1.png" alt="">
                 </div>
-                <div class="box">
-                    <p> Total supply - 21,000,000,000</p>
-                    <p>Burnt - 22%</p>
-                    <p>Treasury/marketing - 5%</p>
-                    <p>Team - 5%</p>
-                    <p>Tax - buy/sell 1%</p>
-                    <p>Transfer charge - 1%</p>
-                    <p>Contract -<a
-                            href="https://manta.socialscan.io/token/0x1e2a8eb8171cc701adbcb7e261a81f152f184b31">0x1E2A8
-                            . . . 84b31</a></p>
-                </div>
+                <ul class="box">
+                    <li>
+                        <span>Contract:</span><a
+                            href="https://manta.socialscan.io/token/0x1e2a8eb8171cc701adbcb7e261a81f152f184b31"
+                            target="_blank">00x1e2a8eb8171cc701adbcb7e261a81f152f184b31</a>
+                    </li>
+                    <li> <span>Total supply:</span> <i class="count">0</i></li>
+                    <li><span>Burnt:</span> <i class="count2"></i>%</li>
+                    <li><span>Treasury/marketing:</span>5%</li>
+                    <li><span>Team:</span>5%</li>
+                    <li><span>Transaction tax:</span>1%</li>
+                    <li><span>Transfer charge:</span> 1%</li>
+
+                </ul>
             </div>
-        </div>
+        </section>
+        <footer>
+            <a href="" class="logo"><img src="./assets//logo.png" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Token</a></li>
+                <li class="btn">
+                    <a href="#">
+                        <img src="./assets/dex.svg" alt="">
+                    </a>
+                </li>
+                <li  class="btn">
+                    <a href="#">
+                        <img src="./assets/explorer.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/21421e1f5e.js" crossorigin="anonymous"></script>
 <script src="./main.js"></script>
+
 </html>
